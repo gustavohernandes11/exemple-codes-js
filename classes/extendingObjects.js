@@ -2,6 +2,12 @@ let personInteractions = {
 	introduceYourselfTo(personName) {
 		return `Hello! I'm ${this.name}, nice to meet you ${personName}!`;
 	},
+	introduceYourself() {
+		return `Hello! I'm ${this.name}!`;
+	},
+	sayBye() {
+		return `Bye!`;
+	},
 };
 
 class Person {
@@ -15,6 +21,8 @@ Object.setPrototypeOf(Person.prototype, personInteractions);
 let andrew = new Person("Andrew");
 
 console.log(andrew.introduceYourselfTo("Maria")); // Hello! I'm Andrew, nice to meet you Maria!
+console.log(andrew.introduceYourself()); // Hello! I'm Andrew!
+console.log(andrew.sayBye()); // Bye!
 console.log(andrew instanceof Person); // true
 
 // 	Warning: Changing the [[Prototype]] of an object is, by the nature of how modern JavaScript engines optimize property accesses,
