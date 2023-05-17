@@ -32,5 +32,5 @@ console.log(joao, maria);
 
 console.log(joao.lastName);
 // Andrade
-// console.log(Joao.sayName());
+console.log(joao.sayName());
 // Hi! My name is Joao.
